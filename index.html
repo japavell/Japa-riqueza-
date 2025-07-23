@@ -1,22 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japa Riqueza</title>
+    <title>Controle Financeiro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>🔮 Japa Riqueza 🔮</h1>
-        <div class="card" id="card">
-            <p>Carta Mística: Riqueza Interior</p>
+        <h1>Controle Financeiro</h1>
+        <p class="frase">"Sua energia define sua riqueza."</p>
+        <div class="form">
+            <input type="text" id="descricao" placeholder="Descrição">
+            <input type="number" id="valor" placeholder="Valor">
+            <select id="tipo">
+                <option value="entrada">Entrada</option>
+                <option value="saida">Saída</option>
+            </select>
+            <button onclick="adicionarTransacao()">Adicionar</button>
         </div>
-        <div class="buttons">
-            <button onclick="canalizar()">Canalizar Sorte ✨</button>
-            <button onclick="meditar()">Meditar Lucro 🧘</button>
-            <button onclick="arriscar()">Arriscar Energia 🎲</button>
-        </div>
+        <ul id="lista"></ul>
+        <h2>Total: R$ <span id="total">0.00</span></h2>
     </div>
     <script src="script.js"></script>
 </body>
