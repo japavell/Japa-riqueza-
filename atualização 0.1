@@ -1,0 +1,17 @@
+// JAPA RIQUEZA — UNIVERSO MÍSTICO // Estrutura inicial completa com todas as funcionalidades combinadas
+
+import React, { useState } from "react"; import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { Input } from "@/components/ui/input"; import { Textarea } from "@/components/ui/textarea"; import { Slider } from "@/components/ui/slider"; import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"; import { motion } from "framer-motion";
+
+export default function JapaRiqueza() { const [tela, setTela] = useState("inicio"); const [somAtivo, setSomAtivo] = useState(true); const [volume, setVolume] = useState(50); const [idioma, setIdioma] = useState("pt"); const [personagem, setPersonagem] = useState("masculino"); const [nome, setNome] = useState(""); const [idade, setIdade] = useState(""); const [entradas, setEntradas] = useState([]); const [saidas, setSaidas] = useState([]);
+
+const [valorEntrada, setValorEntrada] = useState(""); const [valorSaida, setValorSaida] = useState(""); const [descricao, setDescricao] = useState("");
+
+const saldoTotal = entradas.reduce((acc, val) => acc + Number(val.valor), 0) - saidas.reduce((acc, val) => acc + Number(val.valor), 0);
+
+const fundoGalaxia = { background: "linear-gradient(to bottom, #0b0014, #1a002f)", backgroundSize: "200% 200%", animation: "moverFundo 30s ease infinite" };
+
+return ( <div className="min-h-screen flex flex-col items-center justify-center text-white" style={fundoGalaxia}> {tela === "inicio" && ( <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4"> <h1 className="text-4xl font-bold">🌌 Japa Riqueza 🌌</h1> <Button onClick={() => setTela("personagem")}>Entrar</Button> <Button onClick={() => setTela("opcoes")}>Opções</Button> </motion.div> )}
+
+{tela === "opcoes" && (
+    <div className
+
