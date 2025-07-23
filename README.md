@@ -1,2 +1,3 @@
-# Japa-riqueza-
-Jogo mítico para controle financeiro 
+git add .
+git commit -m "Renomeia projeto e adiciona arquivos CSS/JS"
+git push
